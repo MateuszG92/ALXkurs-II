@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafeProblem", "Thread
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolTest", "ThreadPoolTest\ThreadPoolTest.csproj", "{D86F2B21-BAE9-4C90-87DF-DE5C08B37B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PararellTest", "PararellTest\PararellTest.csproj", "{DAAD6496-D98B-4BBE-926D-F6E6B21EE4F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelTest", "PararellTest\ParallelTest.csproj", "{DAAD6496-D98B-4BBE-926D-F6E6B21EE4F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
