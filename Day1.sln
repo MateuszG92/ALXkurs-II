@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolTest", "ThreadPoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelTest", "PararellTest\ParallelTest.csproj", "{DAAD6496-D98B-4BBE-926D-F6E6B21EE4F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskExample", "TaskExample\TaskExample.csproj", "{40CDB75E-1F0D-439F-9AE2-6699103D1299}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DAAD6496-D98B-4BBE-926D-F6E6B21EE4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAAD6496-D98B-4BBE-926D-F6E6B21EE4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAAD6496-D98B-4BBE-926D-F6E6B21EE4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CDB75E-1F0D-439F-9AE2-6699103D1299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CDB75E-1F0D-439F-9AE2-6699103D1299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CDB75E-1F0D-439F-9AE2-6699103D1299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CDB75E-1F0D-439F-9AE2-6699103D1299}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
