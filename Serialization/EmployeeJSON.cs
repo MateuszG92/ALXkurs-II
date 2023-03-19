@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Xml.Serialization;
 
 namespace Serialization
@@ -15,7 +17,8 @@ namespace Serialization
         public string LastName { get; set; }
         public bool? IsManager { get; set; }
         public List<int> AccessRooms { get; set; }
-        [XmlIgnore]
+        [ScriptIgnore]
+        [JsonIgnore]
         public DateTime? StartAt { get; set; }
         public List<string> ExtraData { get; set; }
         private string Token; 

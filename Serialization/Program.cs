@@ -13,7 +13,9 @@ namespace Serialization
             //BinarySerializer.Create();
             //SoapSerializer.Create();
             //XMLSerialization.Create();
-            JSONSerialization.Create();
+            //JSONSerialization.Create();
+            //JSONSerialization.ApplyJSON();
+            JSONSerialization.NBP();
         }
     }
 }
