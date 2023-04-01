@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPFTest.ButtonCultureTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest"
+        mc:Ignorable="d"
+        Title="ButtonCultureTest" Height="150" Width="300">
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label>Liczba</Label>
+            <Label Grid.Column="1" Name="lblNumber">XXXX</Label>
+            <Label Grid.Row="1">Data</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="lblDate">YYYY</Label>
+        </Grid>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Tag="en-US" Margin="10" Click="Button_Click">English(US)</Button>
+            <Button Tag="de-DE" Margin="10" Click="Button_Click">German(DE)</Button>
+            <Button Tag="pa-Arab" Margin="10" Click="Button_Click">Panjabi(PA)</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

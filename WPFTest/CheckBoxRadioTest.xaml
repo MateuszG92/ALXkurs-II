@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFTest.CheckBoxRadioTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest"
+        mc:Ignorable="d"
+        Title="CheckBoxRadioTest" Height="450" Width="800">
+    <StackPanel>
+        <CheckBox IsChecked="True">Opcja 1</CheckBox>
+        <CheckBox IsEnabled="False">Opcja 2</CheckBox>
+        <CheckBox>Opcja 3</CheckBox>
+        <CheckBox>
+            <TextBlock>
+                Opcja 4  <Span Foreground="Red" FontWeight="ExtraBold">(tylko dla wybranych)</Span>
+            </TextBlock>
+        </CheckBox>
+
+        <StackPanel Margin="10">
+            <Label>Wybór jeden z:</Label>
+            <RadioButton GroupName="G1">Tak</RadioButton>
+            <RadioButton GroupName="G1">Nie</RadioButton>
+            <RadioButton GroupName="G1">Nie wiem</RadioButton>
+            <Label>Wybór liczby:</Label>
+            <RadioButton GroupName="G2">0</RadioButton>
+            <RadioButton GroupName="G2">1</RadioButton>
+            <RadioButton GroupName="G2">2</RadioButton>
+        </StackPanel>
+    </StackPanel>
+</Window>
