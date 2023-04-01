@@ -18,10 +18,17 @@
             Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2
         </TextBlock>
         <TextBlock FontSize="20" Margin="10">
-            Normalny tekst <Bold>Pogrubiony </Bold> <Italic>Povhylony </Italic> <Underline>Podkreślony </Underline>
+            Normalny tekst <Bold>Pogrubiony </Bold> <Italic>Pochylony </Italic> <Underline>Podkreślony </Underline>
         </TextBlock>
         <TextBlock FontSize="20" Margin="10">
             Link Do <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="http://alx.pl">ALX</Hyperlink>
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="10">
+           AAA <Span Foreground="Blue">BBB</Span>
+            <Span FontStyle="Italic" FontWeight="ExtraBold">CCC</Span>
+        </TextBlock>
+        <TextBlock Name="textBlockFormat"  FontSize="20" Margin="10">
+            XYZ
         </TextBlock>
     </StackPanel>
 </Window>

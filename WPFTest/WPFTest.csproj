@@ -55,13 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LabelExample.xaml.cs">
+      <DependentUpon>LabelExample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TextBlockExample.xaml.cs">
       <DependentUpon>TextBlockExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxExample.xaml.cs">
+      <DependentUpon>TextBoxExample.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPFResources.xaml.cs">
       <DependentUpon>WPFResources.xaml</DependentUpon>
     </Compile>
     <Page Include="ButtonText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LabelExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -81,6 +91,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TextBlockExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TextBoxExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +128,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\bullet_ball_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bullet_ball_red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
