@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPFTest.TextBlockExample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest"
+        mc:Ignorable="d"
+        Title="TextBlockExample" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock FontSize="20" Margin="10">
+            Linia 1<LineBreak/>
+            Linia 2
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap" FontSize="20" Margin="10" Foreground="Red">
+            Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2
+        </TextBlock>
+        <TextBlock TextTrimming="WordEllipsis" FontSize="20" Margin="10" Foreground="Green">
+            Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2 Linia 1 Linia 2
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="10">
+            Normalny tekst <Bold>Pogrubiony </Bold> <Italic>Povhylony </Italic> <Underline>Podkreślony </Underline>
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="10">
+            Link Do <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="http://alx.pl">ALX</Hyperlink>
+        </TextBlock>
+    </StackPanel>
+</Window>
