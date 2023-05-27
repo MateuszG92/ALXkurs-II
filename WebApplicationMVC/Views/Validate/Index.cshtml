@@ -1,0 +1,52 @@
+﻿@model Member
+
+@{
+    ViewData["Title"] = "Validation";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Member" asp-action="Index" method="post">
+    <div class="row">
+        <div class="col-lg-4">
+            Name
+        </div>
+        <div class="col-lg-8">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            Email
+        </div>
+        <div class="col-lg-8">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            ZipCode
+        </div>
+        <div class="col-lg-8">
+            <input asp-for="ZipCode" class="form-control" />
+            <span asp-validation-for="ZipCode"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            Age
+        </div>
+        <div class="col-lg-8">
+            <input asp-for="Age" class="form-control" />
+            <span asp-validation-for="Age"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8">
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+        </div>
+    </div>
+</form>

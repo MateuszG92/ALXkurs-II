@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Person>
+
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<p>
+    @Html.ActionLink("New","Create")
+</p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.PersonName)</th>
+        <th>@Html.DisplayNameFor(model => model.PersonAge)</th>
+    </tr>
+    <tr></tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelitem => item.PersonName)
+               @* @item.PersonName*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelitem => item.PersonAge)
+             @*   @item.PersonAge*@
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.PersonId}, new {@class="btn btn-info" })
+                @Html.ActionLink("Edit", "Edit", new { id = item.PersonId}, new {@class="btn btn-success" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.PersonId}, new {@class="btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>

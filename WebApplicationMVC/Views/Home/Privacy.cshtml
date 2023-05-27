@@ -1,0 +1,21 @@
+﻿@model List<User>
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+    var dayOfWeek = DateTime.Now.DayOfWeek;
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy. @dayOfWeek</p>
+
+@if(dayOfWeek==DayOfWeek.Saturday||dayOfWeek==DayOfWeek.Sunday)
+{
+    <p>Jest weekend</p> 
+}
+<ul>
+    @foreach (var user in Model)
+    {
+      <li>@user.FirstName | @user.LastName</li>  
+    }
+
+</ul>

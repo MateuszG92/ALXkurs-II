@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using MySql.EntityFrameworkCore.Extensions;
+using MysqlWebApi;
+using MysqlWebApi.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddEntityFrameworkMySQL().AddDbContext<ContextDB>(options => { options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")); });
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -17,6 +23,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
+//app.Use(async (context, next) =>
+//{
+//    //await next();
+//    context.Response.Headers.Add("custom-header", context.Request.Path.ToString());
+//    await next();
+//});
+app.UseMiddleware<SimpleMiddleware>();
 
 app.MapControllers();
 

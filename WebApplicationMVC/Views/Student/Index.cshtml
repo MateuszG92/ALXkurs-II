@@ -1,0 +1,42 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Student Form";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Student" asp-action="Index" method="post">
+    <div class="row">
+        <div class="col-lg-4">
+            Name
+        </div>
+        <div class="col-lg-8">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            Email
+        </div>
+        <div class="col-lg-8">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            Country
+        </div>
+        <div class="col-lg-8">
+            <select asp-for="Country" asp-items="Model.Countries"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8">
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+        </div>
+    </div>
+</form>

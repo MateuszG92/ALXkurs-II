@@ -1,0 +1,10 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Session Example";
+}
+
+<h1>Session values: <br/>
+    @HttpContextAccessor.HttpContext.Session.GetString("CurrentTime")<br/>
+    @HttpContextAccessor.HttpContext.Session.GetInt32("Counter")<br/>
+</h1>
+

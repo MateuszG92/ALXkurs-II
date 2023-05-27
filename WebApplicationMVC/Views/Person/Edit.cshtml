@@ -1,0 +1,40 @@
+﻿@model Person
+
+@{
+    ViewData["Title"] = "Edycja";
+}
+
+<h2>Edycja</h2> 
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Edycja dancyh</h4>
+        @Html.HiddenFor(model=>model.PersonId)
+        <div class="form-group">
+            @Html.LabelFor(model=>model.PersonName, htmlAttributes: new {@class="control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model=>model.PersonName, new {htmlAttributes=new{@class="form-control"}})
+                @Html.ValidationMessageFor(model=>model.PersonName, "",new {@class="text-danger"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model=>model.PersonAge, htmlAttributes: new {@class="control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model=>model.PersonAge, new {htmlAttributes=new{@class="form-control"}})
+                @Html.ValidationMessageFor(model=>model.PersonAge, "",new {@class="text-danger"})
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="submit" value="Save" class="btn-info"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to list","Index")
+</div>
